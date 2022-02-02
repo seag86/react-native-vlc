@@ -1,0 +1,16 @@
+com/yuanzhou/vlc/vlcplayer/ReactVlcPlayerViewManager.java
+ com.yuanzhou.vlc.vlcplayer.ReactVlcPlayerViewManager
+com/yuanzhou/vlc/vlcplayer/ReactVlcPlayerView.java
+ com.yuanzhou.vlc.vlcplayer.ReactVlcPlayerView
+ com.yuanzhou.vlc.vlcplayer.ReactVlcPlayerView$1
+ com.yuanzhou.vlc.vlcplayer.ReactVlcPlayerView$2
+ com.yuanzhou.vlc.vlcplayer.ReactVlcPlayerView$3
+ com.yuanzhou.vlc.vlcplayer.ReactVlcPlayerView$4
+ com.yuanzhou.vlc.vlcplayer.ReactVlcPlayerView$5
+com/yuanzhou/vlc/BuildConfig.java
+ com.yuanzhou.vlc.BuildConfig
+com/yuanzhou/vlc/vlcplayer/VideoEventEmitter.java
+ com.yuanzhou.vlc.vlcplayer.VideoEventEmitter
+ com.yuanzhou.vlc.vlcplayer.VideoEventEmitter$VideoEvents
+com/yuanzhou/vlc/ReactVlcPlayerPackage.java
+ com.yuanzhou.vlc.ReactVlcPlayerPackage
