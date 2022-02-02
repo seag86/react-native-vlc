@@ -87,31 +87,32 @@ export default class ControlBtn extends Component {
               </View> */}
               {
                 showMiddleButton && (
-                  <View style={{ width: 110, flexDirection: 'row' }}>
-                    <TouchableOpacity
-                      activeOpacity={1}
-                      onPress={() => {
-                        onSeekBack();
-                      }}
-                      style={{ width: 40, height: 50, alignItems: 'center', justifyContent: 'center' }}>
-                      <Icon name={'rewind-10'} size={20} color="#fff" />
-                    </TouchableOpacity>
+                  <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
+                    {totalTime > 0 &&
+                      <TouchableOpacity
+                        activeOpacity={1}
+                        onPress={() => {
+                          onSeekBack();
+                        }}
+                        style={{ width: 40, height: 50, alignItems: 'center', justifyContent: 'center' }}>
+                        <Icon name={'rewind-10'} size={20} color="#fff" />
+                      </TouchableOpacity>}
                     <TouchableOpacity
                       activeOpacity={1}
                       onPress={() => {
                         onPausedPress && onPausedPress(!paused);
                       }}
-                      style={{ alignItems: 'center', justifyContent: 'center' }}>
+                      style={{ width: 40, height: 50, alignItems: 'center', justifyContent: 'center' }}>
                       <Icon name={paused ? 'play' : 'pause'} size={30} color="#fff" />
                     </TouchableOpacity>
-                    <TouchableOpacity
+                    {totalTime > 0 && <TouchableOpacity
                       activeOpacity={1}
                       onPress={() => {
                         onSeekForward();
                       }}
                       style={{ width: 40, height: 50, alignItems: 'center', justifyContent: 'center' }}>
                       <Icon name={'fast-forward-10'} size={20} color="#fff" />
-                    </TouchableOpacity>
+                    </TouchableOpacity>}
                   </View>
                 )
               }
@@ -120,8 +121,7 @@ export default class ControlBtn extends Component {
                   style={{
                     flex: 1,
                     alignItems: 'center',
-                    flexDirection: 'row',
-                    backgroundColor: '#444'
+                    flexDirection: 'row'
                   }}>
                   <View style={{ justifyContent: 'center', alignItems: 'center', height: 50, minWidth: 50, }}>
                     <Text style={{ fontSize: 11, color: '#fff', }}>
@@ -168,7 +168,7 @@ export default class ControlBtn extends Component {
                       onPress={() => {
                         onFullPress && onFullPress(!isFull);
                       }}
-                      style={{ width: 50, height: 50, alignItems: 'center', justifyContent: 'center', backgroundColor: '#444' }}>
+                      style={{ width: 50, height: 50, alignItems: 'center', justifyContent: 'center' }}>
                       <Icon name={isFull ? 'fullscreen-exit' : 'fullscreen'} size={30} color="#fff" />
                     </TouchableOpacity>
                   ) : <View style={{ width: 50 }} />
