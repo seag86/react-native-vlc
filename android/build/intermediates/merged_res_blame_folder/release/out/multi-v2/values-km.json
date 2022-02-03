@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\node\\saveyard\\node_modules\\@nghinv\\react-native-vlc\\android\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-km\\values-km.xml",
+            "outputFile": "C:\\node\\saveyard\\node_modules\\@seag86\\react-native-vlc\\android\\build\\intermediates\\res\\merged\\release\\values-km\\values-km.xml",
             "map": [
                 {
                     "source": "C:\\Users\\John\\.gradle\\caches\\transforms-3\\30764cb74750e4ac2fa6019fe550d906\\transformed\\appcompat-1.0.2\\res\\values-km\\values-km.xml",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "outputFile": "C:\\node\\saveyard\\node_modules\\@nghinv\\react-native-vlc\\android\\build\\intermediates\\res\\merged\\release\\values-km\\values-km.xml",
+            "outputFile": "C:\\node\\saveyard\\node_modules\\@seag86\\react-native-vlc\\android\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-km\\values-km.xml",
             "map": [
                 {
                     "source": "C:\\Users\\John\\.gradle\\caches\\transforms-3\\30764cb74750e4ac2fa6019fe550d906\\transformed\\appcompat-1.0.2\\res\\values-km\\values-km.xml",

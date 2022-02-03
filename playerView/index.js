@@ -142,6 +142,16 @@ export default class CommonVideo extends Component {
     Orientation && Orientation.lockToLandscape && Orientation.lockToLandscape();
   };
 
+  _seek = (value) => {
+    console.log('_seek', value)
+    this.vlcPlayerView && this.vlcPlayerView.onSlidingComplete(value)
+  };
+
+  _play = () => {
+    console.log('_play' )
+    this.vlcPlayerView && this.vlcPlayerView._play()
+  };
+
   render() {
     const { adUrl, showAd, onAdEnd, onEnd, style, title, onLeftPress, showBack, showTitle, closeFullScreen, videoAspectRatio, fullVideoAspectRatio } = this.props;
     const { isEndAd, isFull, currentUrl } = this.state;
@@ -213,6 +223,7 @@ export default class CommonVideo extends Component {
         {realShowAd && (
           <VLCPlayerView
             {...this.props}
+            ref={ref => (this.vlcPlayerView = ref)}
             videoAspectRatio={currentVideoAspectRatio}
             uri={adUrl}
             source={{ uri: adUrl, type: adType }}
@@ -233,6 +244,7 @@ export default class CommonVideo extends Component {
         {showVideo && (
           <VLCPlayerView
             {...this.props}
+            ref={ref => (this.vlcPlayerView = ref)}
             uri={currentUrl}
             videoAspectRatio={currentVideoAspectRatio}
             onLeftPress={onLeftPress}
