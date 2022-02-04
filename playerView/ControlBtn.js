@@ -54,6 +54,7 @@ export default class ControlBtn extends Component {
       currentTime,
       totalTime,
       style,
+      background,
       titleGolive,
       showLeftButton,
       showMiddleButton,
@@ -85,9 +86,10 @@ export default class ControlBtn extends Component {
                 <Text
                   style={{ fontSize: 11, color: '#fff' }}>       </Text>
               </View> */}
+              {!showSlider && <View style={{ width: 50 }} />}
               {
                 showMiddleButton && (
-                  <View style={{ flexDirection: 'row', paddingLeft: 10 }}>
+                  <View style={[background, { flexDirection: 'row', paddingLeft: 10 }]}>
                     {totalTime > 0 &&
                       <TouchableOpacity
                         activeOpacity={1}
@@ -118,11 +120,11 @@ export default class ControlBtn extends Component {
               }
               {showSlider && totalTime > 0 && (
                 <View
-                  style={{
+                  style={[background, {
                     flex: 1,
                     alignItems: 'center',
                     flexDirection: 'row'
-                  }}>
+                  }]}>
                   <View style={{ justifyContent: 'center', alignItems: 'center', height: 50, minWidth: 50, }}>
                     <Text style={{ fontSize: 11, color: '#fff', }}>
                       {this._getTime(currentTime) || 0}
@@ -152,7 +154,7 @@ export default class ControlBtn extends Component {
                   </View>
                 </View>
               )}
-              <View style={styles.right}>
+              <View style={[background, styles.right]}>
                 {showGoLive && <TouchableOpacity
                   activeOpacity={1}
                   onPress={() => {
@@ -168,7 +170,7 @@ export default class ControlBtn extends Component {
                       onPress={() => {
                         onFullPress && onFullPress(!isFull);
                       }}
-                      style={{ width: 50, height: 50, alignItems: 'center', justifyContent: 'center' }}>
+                      style={[background, { width: 50, height: 50, alignItems: 'center', justifyContent: 'center' }]}>
                       <Icon name={isFull ? 'fullscreen-exit' : 'fullscreen'} size={30} color="#fff" />
                     </TouchableOpacity>
                   ) : <View style={{ width: 50 }} />
@@ -212,16 +214,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
   controlContent: {
     width: '100%',
     height: 50,
-    backgroundColor: 'rgba(255,255,255,0.6)',
   },
   controlContent2: {
     flex: 1,
     flexDirection: 'row',
-    backgroundColor: 'rgba(0,0,0,0.7)',
+    backgroundColor: 'rgba(0,0,0,0)',
     alignItems: 'center',
     justifyContent: 'space-between',
   },

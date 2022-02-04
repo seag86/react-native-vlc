@@ -84,6 +84,7 @@ export default class VLCPlayerView extends Component {
     const {
       onEnd,
       style,
+      background={backgroundColor: '#5558'},
       isAd,
       type,
       isFull,
@@ -93,6 +94,7 @@ export default class VLCPlayerView extends Component {
       closeFullScreen,
       showBack,
       showTitle,
+      showSlider,
       videoAspectRatio,
       showGoLive,
       onGoLivePress,
@@ -166,7 +168,7 @@ export default class VLCPlayerView extends Component {
           onStopped={this.onEnded.bind(this)}
           onPlaying={this.onPlaying.bind(this)}
           onBuffering={this.onBuffering.bind(this)}
-          //onPaused={this.onPaused.bind(this)}
+          //onPaused={this.onPaused.bind(this)} //bug
           progressUpdateInterval={250}
           onError={this._onError}
           onOpen={this._onOpen}
@@ -232,7 +234,9 @@ export default class VLCPlayerView extends Component {
         <View style={[styles.bottomView]}>
           {showControls && (
             <ControlBtn
-              showSlider={!isAd}
+              //showSlider={!isAd}
+              background={background}
+              showSlider={showSlider}
               showAd={showAd}
               onEnd={onEnd}
               title={title}
