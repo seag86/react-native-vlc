@@ -393,7 +393,7 @@ export default class VLCPlayerView extends Component {
     const currentTime = event.currentTime;
     let loadingSuccess = false;
 
-    onVLCProgress && onVLCProgress();
+    onVLCProgress && onVLCProgress(currentTime);
     if (currentTime > 0 || this.state.currentTime > 0) {
       loadingSuccess = true;
     }
