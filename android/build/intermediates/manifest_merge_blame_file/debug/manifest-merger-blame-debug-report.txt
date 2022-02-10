@@ -6,16 +6,16 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="16"
-8-->C:\node\saveyard\node_modules\@seag86\react-native-vlc\android\src\main\AndroidManifest.xml
+8-->C:\node\saveyard\node_modules\@nghinv\react-native-vlc\android\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
-9-->C:\node\saveyard\node_modules\@seag86\react-native-vlc\android\src\main\AndroidManifest.xml
+9-->C:\node\saveyard\node_modules\@nghinv\react-native-vlc\android\src\main\AndroidManifest.xml
 10
 11    <application
-11-->C:\node\saveyard\node_modules\@seag86\react-native-vlc\android\src\main\AndroidManifest.xml:5:5-8:19
+11-->C:\node\saveyard\node_modules\@nghinv\react-native-vlc\android\src\main\AndroidManifest.xml:5:5-8:19
 12        android:label="@string/app_name"
-12-->C:\node\saveyard\node_modules\@seag86\react-native-vlc\android\src\main\AndroidManifest.xml:5:19-51
+12-->C:\node\saveyard\node_modules\@nghinv\react-native-vlc\android\src\main\AndroidManifest.xml:5:19-51
 13        android:supportsRtl="true" >
-13-->C:\node\saveyard\node_modules\@seag86\react-native-vlc\android\src\main\AndroidManifest.xml:6:9-35
+13-->C:\node\saveyard\node_modules\@nghinv\react-native-vlc\android\src\main\AndroidManifest.xml:6:9-35
 14    </application>
 15
 16</manifest>

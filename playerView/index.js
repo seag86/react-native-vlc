@@ -143,7 +143,7 @@ export default class CommonVideo extends Component {
   };
 
   _seek = (value) => {
-    console.log('_seek', value)
+    //console.log('_seek', value)
     this.vlcPlayerView && this.vlcPlayerView.onSlidingComplete(value)
   };
 

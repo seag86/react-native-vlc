@@ -309,7 +309,7 @@ export default class VLCPlayerView extends Component {
     });
     this.bufferTime = new Date().getTime();
     if (!this.bufferInterval) {
-      this.bufferInterval = setInterval(this.bufferIntervalFunction, 250);
+      this.bufferInterval = setInterval(this.bufferIntervalFunction, 1000);
     }
     console.log('onBuffering', event);
   }
@@ -318,7 +318,7 @@ export default class VLCPlayerView extends Component {
     const currentTime = new Date().getTime();
     const diffTime = currentTime - this.bufferTime;
     console.log('bufferIntervalFunction');
-    if (diffTime > 1000) {
+    if (diffTime > 2000) {
       clearInterval(this.bufferInterval);
       this.setState({
         paused: true,
