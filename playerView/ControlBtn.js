@@ -97,7 +97,7 @@ export default class ControlBtn extends Component {
                           onSeekBack();
                         }}
                         style={{ width: 40, height: 50, alignItems: 'center', justifyContent: 'center' }}>
-                        <Icon name={'rewind-10'} size={20} color="#fff" />
+                        <Icon style={styles.tShadow} name={'rewind-10'} size={20} color="#fff" />
                       </TouchableOpacity>}
                     <TouchableOpacity
                       activeOpacity={1}
@@ -105,7 +105,7 @@ export default class ControlBtn extends Component {
                         onPausedPress && onPausedPress(!paused);
                       }}
                       style={{ width: 40, height: 50, alignItems: 'center', justifyContent: 'center' }}>
-                      <Icon name={paused ? 'play' : 'pause'} size={30} color="#fff" />
+                      <Icon style={styles.tShadow} name={paused ? 'play' : 'pause'} size={30} color="#fff" />
                     </TouchableOpacity>
                     {totalTime > 0 && <TouchableOpacity
                       activeOpacity={1}
@@ -113,7 +113,7 @@ export default class ControlBtn extends Component {
                         onSeekForward();
                       }}
                       style={{ width: 40, height: 50, alignItems: 'center', justifyContent: 'center' }}>
-                      <Icon name={'fast-forward-10'} size={20} color="#fff" />
+                      <Icon style={styles.tShadow} name={'fast-forward-10'} size={20} color="#fff" />
                     </TouchableOpacity>}
                   </View>
                 )
@@ -171,7 +171,7 @@ export default class ControlBtn extends Component {
                         onFullPress && onFullPress(!isFull);
                       }}
                       style={[background, { width: 50, height: 50, alignItems: 'center', justifyContent: 'center' }]}>
-                      <Icon name={isFull ? 'fullscreen-exit' : 'fullscreen'} size={30} color="#fff" />
+                      <Icon style={styles.tShadow} name={isFull ? 'fullscreen-exit' : 'fullscreen'} size={30} color="#fff" />
                     </TouchableOpacity>
                   ) : <View style={{ width: 50 }} />
                 }
@@ -265,5 +265,10 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  tShadow: {
+    textShadowColor: 'rgba(0, 0, 0, 1)',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 10
   },
 });
