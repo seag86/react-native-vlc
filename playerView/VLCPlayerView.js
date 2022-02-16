@@ -57,6 +57,7 @@ export default class VLCPlayerView extends Component {
     showRightButton: true,
     animationLayout: true,
     videoAspectRatio: '16:9',
+    autoAspectRatio: false,
   };
 
   componentDidMount() {
@@ -96,6 +97,7 @@ export default class VLCPlayerView extends Component {
       showTitle,
       showSlider,
       videoAspectRatio,
+      autoAspectRatio,
       showGoLive,
       onGoLivePress,
       onReplayPress,
@@ -163,6 +165,7 @@ export default class VLCPlayerView extends Component {
           style={[styles.video]}
           source={source}
           videoAspectRatio={videoAspectRatio}
+          autoAspectRatio={autoAspectRatio}
           onProgress={this.onProgress.bind(this)}
           onEnd={this.onEnded.bind(this)}
           onStopped={this.onEnded.bind(this)}
